@@ -1,20 +1,90 @@
----
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="https://www.w3.org/2005/Atom" xmlns:dc="https://purl.org/dc/elements/1.1/">
   <channel>
-    <title>{{ site.name | xml_escape }}</title>
-    <description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
-    <link>{{ site.url }}</link>
-    <atom:link href="{{ page.path | absolute_url }}" rel="self" type="application/rss+xml" />
-    {% for post in site.posts limit:10 %}
+    <title>Gumgood Blog</title>
+    <description></description>
+    <link>https://gumgood.github.io</link>
+    <atom:link href="https://gumgood.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.description | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | absolute_url }}</link>
-        <guid isPermaLink="true">{{ post.url | absolute_url }}</guid>
+        <title>접미사 배열과 LCP 배열(Suffix Array and LCP Array)</title>
+        <description>접미사 배열과 LCP 배열소개 및 연습문제</description>
+        <pubDate>Tue, 15 Jun 2021 00:00:00 +0900</pubDate>
+        <link>https://gumgood.github.io/posts/suffix-array-and-lcp</link>
+        <guid isPermaLink="true">https://gumgood.github.io/posts/suffix-array-and-lcp</guid>
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>각도 정렬 알고리즘(Sort by Angular)</title>
+        <description>각도 정렬 알고리즘 소개</description>
+        <pubDate>Sat, 05 Jun 2021 00:00:00 +0900</pubDate>
+        <link>https://gumgood.github.io/posts/sort-by-angular</link>
+        <guid isPermaLink="true">https://gumgood.github.io/posts/sort-by-angular</guid>
+      </item>
+    
+      <item>
+        <title>Codeforces Global Round 14 개인 풀이</title>
+        <description>대회 참가 후기 및 개인 풀이</description>
+        <pubDate>Tue, 04 May 2021 00:00:00 +0900</pubDate>
+        <link>https://gumgood.github.io/posts/codeforces-global-round-14</link>
+        <guid isPermaLink="true">https://gumgood.github.io/posts/codeforces-global-round-14</guid>
+      </item>
+    
+      <item>
+        <title>프로그래머스 월간 코드 챌린지 시즌2</title>
+        <description>대회 참가 후기 및 개인 풀이</description>
+        <pubDate>Wed, 28 Apr 2021 00:00:00 +0900</pubDate>
+        <link>https://gumgood.github.io/posts/programmers-monthly-code-challenge-s2-april</link>
+        <guid isPermaLink="true">https://gumgood.github.io/posts/programmers-monthly-code-challenge-s2-april</guid>
+      </item>
+    
+      <item>
+        <title>Codeforces Round 718 (Div.1 + Div.2) 개인 풀이</title>
+        <description>대회 참가 후기 및 개인 풀이</description>
+        <pubDate>Sun, 25 Apr 2021 00:00:00 +0900</pubDate>
+        <link>https://gumgood.github.io/posts/codeforces-round-718</link>
+        <guid isPermaLink="true">https://gumgood.github.io/posts/codeforces-round-718</guid>
+      </item>
+    
+      <item>
+        <title>Codeforces Round 717 (Div.2) 개인 풀이</title>
+        <description>대회 참가 후기 및 개인 풀이</description>
+        <pubDate>Thu, 22 Apr 2021 00:00:00 +0900</pubDate>
+        <link>https://gumgood.github.io/posts/codeforces-round-717</link>
+        <guid isPermaLink="true">https://gumgood.github.io/posts/codeforces-round-717</guid>
+      </item>
+    
+      <item>
+        <title>Codeforces Round 716 (Div.2) 개인 풀이</title>
+        <description>대회 참가 후기 및 개인 풀이</description>
+        <pubDate>Thu, 22 Apr 2021 00:00:00 +0900</pubDate>
+        <link>https://gumgood.github.io/posts/codeforces-round-716</link>
+        <guid isPermaLink="true">https://gumgood.github.io/posts/codeforces-round-716</guid>
+      </item>
+    
+      <item>
+        <title>Codeforces Round 714 (Div.2) 개인 풀이</title>
+        <description>대회 참가 후기 및 개인 풀이</description>
+        <pubDate>Mon, 12 Apr 2021 00:00:00 +0900</pubDate>
+        <link>https://gumgood.github.io/posts/codeforces-round-714</link>
+        <guid isPermaLink="true">https://gumgood.github.io/posts/codeforces-round-714</guid>
+      </item>
+    
+      <item>
+        <title>Codeforces Round 713 (Div.3) 개인 풀이</title>
+        <description>대회 참가 후기 및 개인 풀이</description>
+        <pubDate>Sun, 11 Apr 2021 00:00:00 +0900</pubDate>
+        <link>https://gumgood.github.io/posts/codeforces-round-713</link>
+        <guid isPermaLink="true">https://gumgood.github.io/posts/codeforces-round-713</guid>
+      </item>
+    
+      <item>
+        <title>Codeforces Round 712 (Div.2) 개인 풀이</title>
+        <description>대회 참가 후기 및 개인 풀이</description>
+        <pubDate>Mon, 05 Apr 2021 00:00:00 +0900</pubDate>
+        <link>https://gumgood.github.io/posts/codeforces-round-712</link>
+        <guid isPermaLink="true">https://gumgood.github.io/posts/codeforces-round-712</guid>
+      </item>
+    
   </channel>
 </rss>

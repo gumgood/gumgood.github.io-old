@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <title>프로그래머스 월간 코드 챌린지 시즌2 | Gumgood Blog</title>
+  
+  <meta name="description" content="대회 참가 후기 및 개인 풀이">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="프로그래머스 월간 코드 챌린지 시즌2">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gumgood.github.io/posts/programmers-monthly-code-challenge-s2-april">
+  <meta property="og:description" content="대회 참가 후기 및 개인 풀이">
+  <meta property="og:site_name" content="Gumgood Blog">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="https://gumgood.github.io/posts/programmers-monthly-code-challenge-s2-april">
+  <meta name="twitter:title" content="프로그래머스 월간 코드 챌린지 시즌2">
+  <meta name="twitter:description" content="대회 참가 후기 및 개인 풀이">
+
+  
+    <meta property="og:image" content="https://gumgood.github.io/assets/og-image.jpg">
+    <meta name="twitter:image" content="https://gumgood.github.io/assets/og-image.jpg">
+  
+
+  <link href="https://gumgood.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Gumgood Blog Last 10 blog posts" />
+
+  
+
+  
+
+    
+      <link rel="icon" type="image/x-icon" href="/assets/favicon-light.ico">
+      <link rel="apple-touch-icon" href="/assets/apple-touch-icon-light.png">
+      <link rel="stylesheet" type="text/css" href="/assets/light.css">
+    
+
+  
+
+  <!-- mathjax support-->
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+      inlineMath: [ ['$', '$'] ],
+      displayMath: [ ['$$', '$$'] ],
+      processEscapes: true,
+    }
+});
+MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
+      alert("Math Processing Error: "+message[1]);
+    });
+MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
+      alert("Math Processing Error: "+message[1]);
+    });
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+  <!-- code highlight -->
+  <link href="/assets/syntax.css" rel="stylesheet">
+
+  <!-- google ananlytics -->
+  <meta name="google-site-verification" content="keI0ZBFx59S-ScMR-4FTc81bsVJ6UTXq8JfKhsYZqsM" />
+
+  <!-- naver search advisor -->
+  <meta name="naver-site-verification" content="c3b1241687be8818c49d73438e224864dadc03e7" />
+
+</head>
+
+<body>
+  <main>
+    <div class="grid grid-centered">
+      <div class="grid-cell">
+        <nav class="header-nav scrollappear">
+  <a href="/" class="header-logo" title="Gumgood Blog">Gumgood Blog</a>
+  <ul class="header-links">
+    
+      <li>
+        <a href="/about" title="About me">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-about">
+  <use href="/assets/about.svg#icon-about" xlink:href="/assets/about.svg#icon-about"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+    
+      <li>
+        <a href="https://github.com/gumgood" rel="noreferrer noopener" target="_blank" title="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-github">
+  <use href="/assets/github.svg#icon-github" xlink:href="/assets/github.svg#icon-github"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      <li>
+        <a href="mailto:idealwon7700@gmail.com" title="Email">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-email">
+  <use href="/assets/email.svg#icon-email" xlink:href="/assets/email.svg#icon-email"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+  </ul>
+</nav>
+
+
+  <ul class="header-tags scrollappear">
+    
+    
+      
+        <li><a href="/tag/algorithm">Algorithm</a></li>
+    
+      
+        <li><a href="/tag/editorial">Editorial</a></li>
+    
+      
+        <li><a href="/tag/trick">Trick</a></li>
+    
+  </ul>
+
+
+        <article class="article scrollappear">
+          <header class="article-header">
+            <h1>프로그래머스 월간 코드 챌린지 시즌2</h1>
+            <p>대회 참가 후기 및 개인 풀이</p>
+            <div class="article-list-footer">
+  <span class="article-list-date">
+    April 28, 2021
+  </span>
+  <span class="article-list-divider">-</span>
+  <span class="article-list-minutes">
+    
+    
+      8 minute read
+    
+  </span>
+  <span class="article-list-divider">-</span>
+  <div class="article-list-tags">
+    
+      
+      <a href="/tag/editorial" title="See all posts with tag 'Editorial'">Editorial</a>
+    
+  </div>
+</div>
+          </header>
+
+          <div class="article-content">
+            <h3 id="a-음양-더하기">A. 음양 더하기</h3>
+
+<p>몇 개의 정수들이 있다. 이 정수의 절대값을 나타내는 수열과 부호를 나타내는 boolean 배열이 주어진다. 이 때, 모든 정수의 합을 구하는 문제다.</p>
+
+<p>signs[]를 보고 부호를 정해서 더하면 된다.</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre></td><td class="rouge-code"><pre><span class="cp">#include &lt;string&gt;
+#include &lt;vector&gt;
+</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">solution</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">absolutes</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span> <span class="n">signs</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">answer</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">absolutes</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="o">++</span><span class="n">i</span><span class="p">){</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">signs</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="n">answer</span> <span class="o">+=</span> <span class="n">absolutes</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="k">else</span> <span class="n">answer</span> <span class="o">-=</span> <span class="n">absolutes</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">answer</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="b-괄호-회전하기">B. 괄호 회전하기</h3>
+
+<p><code class="highlighter-rouge">()</code>, <code class="highlighter-rouge">[]</code>, <code class="highlighter-rouge">{}</code>로 이뤄진 괄호 문자열이 주어진다. 이를 왼쪽으로 x번 shift를 했을 때 올바른 괄호 문자열이 되는 x의 개수를 구하는 문제다.</p>
+
+<p>괄호 문자열의 길이 N은 최대 1000으로 여유롭다. 모든 x에 대해 shift해서 올바른 괄호 문자열인지 판단하는데 O(N)이고 N개의 x에 대해 이를 반복하면 전체 O(N^2)에 해결할 수 있다.</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+</pre></td><td class="rouge-code"><pre><span class="cp">#include &lt;string&gt;
+#include &lt;vector&gt;
+#include &lt;deque&gt;
+#include &lt;stack&gt;
+</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">bool</span> <span class="nf">chk</span><span class="p">(</span><span class="n">deque</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">dq</span><span class="p">){</span>
+    <span class="n">stack</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&gt;</span> <span class="n">s</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">dq</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="o">++</span><span class="n">i</span><span class="p">){</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">dq</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="sc">'('</span><span class="p">)</span> <span class="n">s</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">dq</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">dq</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="sc">'['</span><span class="p">)</span> <span class="n">s</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">dq</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">dq</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="sc">'{'</span><span class="p">)</span> <span class="n">s</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">dq</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">dq</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="sc">')'</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span> <span class="o">||</span> <span class="n">s</span><span class="p">.</span><span class="n">top</span><span class="p">()</span> <span class="o">!=</span> <span class="sc">'('</span><span class="p">)</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+            <span class="k">else</span> <span class="n">s</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+        <span class="p">}</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">dq</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="sc">'}'</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span> <span class="o">||</span> <span class="n">s</span><span class="p">.</span><span class="n">top</span><span class="p">()</span> <span class="o">!=</span> <span class="sc">'{'</span><span class="p">)</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+            <span class="k">else</span> <span class="n">s</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+        <span class="p">}</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">dq</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="sc">']'</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span> <span class="o">||</span> <span class="n">s</span><span class="p">.</span><span class="n">top</span><span class="p">()</span> <span class="o">!=</span> <span class="sc">'['</span><span class="p">)</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+            <span class="k">else</span> <span class="n">s</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">s</span><span class="p">.</span><span class="n">empty</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">solution</span><span class="p">(</span><span class="n">string</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">answer</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+    <span class="n">deque</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&gt;</span> <span class="n">dq</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="o">++</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">dq</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="o">++</span><span class="n">i</span><span class="p">){</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">chk</span><span class="p">(</span><span class="n">dq</span><span class="p">))</span> <span class="n">answer</span><span class="o">++</span><span class="p">;</span>
+        <span class="n">dq</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">dq</span><span class="p">.</span><span class="n">front</span><span class="p">());</span>
+        <span class="n">dq</span><span class="p">.</span><span class="n">pop_front</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">answer</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="c-모두-0으로-만들기">C. 모두 0으로 만들기</h3>
+
+<p>각 정점에 가중치가 있는 트리가 주어진다. 연결된 두 정점을 골라 한쪽을 1 증가시키고 다른 한쪽을 1 감소시키는 연산을 할 수 있다. 트리의 모든 정점의 가중치를 0으로 만들 수 있는지, 만들 수 있다면 최소 몇 번의 연산이 필요한지 구하는 문제다.</p>
+
+<p>Greedy하게 해결할 수 있다. 어떤 리프 노드의 가중치가 c일 때 이를 0으로 만들고 parent에 c를 넘겨주면, 이 리프 노드를 제외한 트리를 0으로 만드는 또다른 부분 문제가 된다. 이 때 각 연산은 교환 법칙이 성립하기 때문에 c번의 연산만 하면 된다.</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+</pre></td><td class="rouge-code"><pre><span class="cp">#include &lt;string&gt;
+#include &lt;vector&gt;
+</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">lint</span> <span class="o">=</span> <span class="kt">long</span> <span class="kt">long</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+<span class="n">lint</span> <span class="n">b</span><span class="p">[</span><span class="mi">300001</span><span class="p">];</span>
+<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">adj</span><span class="p">[</span><span class="mi">300001</span><span class="p">];</span>
+
+<span class="n">lint</span> <span class="nf">go</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span><span class="kt">int</span> <span class="n">p</span><span class="p">){</span>
+    <span class="n">lint</span> <span class="n">ret</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="n">to</span> <span class="o">:</span> <span class="n">adj</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">to</span> <span class="o">!=</span> <span class="n">p</span><span class="p">)</span>
+            <span class="n">ret</span> <span class="o">+=</span> <span class="n">go</span><span class="p">(</span><span class="n">to</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+    <span class="n">ret</span> <span class="o">+=</span> <span class="n">abs</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">x</span><span class="p">]);</span>
+    <span class="n">b</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">+=</span> <span class="n">b</span><span class="p">[</span><span class="n">x</span><span class="p">];</span>
+    <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">lint</span> <span class="nf">solution</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">a</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">edges</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">a</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="o">++</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="n">e</span> <span class="o">:</span> <span class="n">edges</span><span class="p">){</span>
+        <span class="n">adj</span><span class="p">[</span><span class="n">e</span><span class="p">[</span><span class="mi">0</span><span class="p">]].</span><span class="n">push_back</span><span class="p">(</span><span class="n">e</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+        <span class="n">adj</span><span class="p">[</span><span class="n">e</span><span class="p">[</span><span class="mi">1</span><span class="p">]].</span><span class="n">push_back</span><span class="p">(</span><span class="n">e</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+    <span class="p">}</span>
+    <span class="n">lint</span> <span class="n">ans</span> <span class="o">=</span> <span class="n">go</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">?</span> <span class="n">ans</span> <span class="o">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="d-rpg와-쿼리">D. RPG와 쿼리</h3>
+
+<p>n개의 정점과 m개의 간선으로 이뤄진 가중치 그래프와 상수 z가 주어진다. 매 턴마다 움직이지 않고 z원을 얻거나, 연결된 정점으로 가면서 가중치 값인 w원을 얻거나, 어떤 도시든 순간이동하고 0원을 얻을 수 있다. 각 쿼리마다 c가 주어지는데, 정확히 c원을 모을 수 있는지, 모을 수 있다면 최소 몇 턴이 필요한지 구하는 문제다.</p>
+
+<p>Dynamic Programming으로 해결할 수 있다. 다음과 같이 정의해보자.</p>
+
+<p>    dp[i][j] = i번 정점에 도달했을 때 j원을 들고 있는 경우, 필요한 최소 턴수</p>
+
+<p>i는 최대 3000이지만 j는 최대 10^18이기 때문에 불가능하다. 대신 몇 가지 관찰을 통해 두 번째 차원의 크기를 줄일 수 있다. 정점을 적당히 이동하던 중에 모아야할 돈이 z의 배수만큼 남았다면 그 정점에 계속 있으면 된다. 모든 w는 z보다 작기 때문에 경로를 먼저 이동하면서 x = c (mod z)인 x원을 모은 뒤, z원을 반복적으로 모으는 순서로 강제하자.</p>
+
+<p>이제, 각 정점에서 도달할 때 x = c (mod z)인 x원을 들고 있는 경우, 필요한 최소 턴 수만 구하면 된다. 여기서 또 하나의 관찰을 할 수 있는데, 여기 필요한 최소 턴 수는 50을 넘지 않는다. 턴 수가 50이 넘는다면 비둘기집 원리에 의해 (mod z)한 값이 같은 순간이 두 번 존재하게 된다. 그 사이에서 z+…+z원 만큼 얻은 것이므로 생략할 수 있기 때문이다. 따라서 50원이하의 돈을 최대 50번 벌 수 있으므로 dp[3000][50*50]이면 충분하다.</p>
+
+<p>2500개의 상태마다 모든 간선을 돌면서 업데이트 해주면 되므로 O((n+m) * 2500)에 dp 테이블을 채울 수 있다. 마지막으로 mn[i] = min(dp[0 ~ n-1][i])로 전처리하면 각 쿼리를 O(1)에 답할 수 있다.</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+</pre></td><td class="rouge-code"><pre><span class="cp">#include &lt;string&gt;
+#include &lt;cstdlib&gt;
+#include &lt;cstring&gt;
+#include &lt;vector&gt;
+</span><span class="kt">void</span> <span class="nf">mmn</span><span class="p">(</span><span class="kt">long</span> <span class="kt">long</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">,</span><span class="kt">long</span> <span class="kt">long</span> <span class="n">y</span><span class="p">){</span> <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">==-</span><span class="mi">1</span> <span class="o">||</span> <span class="n">x</span><span class="o">&gt;</span><span class="n">y</span><span class="p">)</span> <span class="n">x</span> <span class="o">=</span> <span class="n">y</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="n">w</span><span class="p">[</span><span class="mi">3000</span><span class="p">][</span><span class="mi">3000</span><span class="p">];</span>
+<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">rev</span><span class="p">[</span><span class="mi">3000</span><span class="p">];</span>
+
+<span class="kt">long</span> <span class="kt">long</span> <span class="n">dp</span><span class="p">[</span><span class="mi">3000</span><span class="p">][</span><span class="mi">2501</span><span class="p">],</span> <span class="n">mn</span><span class="p">[</span><span class="mi">2501</span><span class="p">];</span>
+
+<span class="n">vector</span><span class="o">&lt;</span><span class="kt">long</span> <span class="kt">long</span><span class="o">&gt;</span> <span class="n">solution</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">int</span> <span class="n">z</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="n">roads</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">long</span> <span class="kt">long</span><span class="o">&gt;</span> <span class="n">queries</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="n">e</span> <span class="o">:</span> <span class="n">roads</span><span class="p">){</span>
+        <span class="n">rev</span><span class="p">[</span><span class="n">e</span><span class="p">[</span><span class="mi">1</span><span class="p">]].</span><span class="n">push_back</span><span class="p">(</span><span class="n">e</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+        <span class="n">w</span><span class="p">[</span><span class="n">e</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="n">e</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="n">e</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+    <span class="p">}</span>
+
+    <span class="c1">// solve</span>
+    <span class="n">memset</span><span class="p">(</span><span class="n">mn</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">mn</span><span class="p">));</span>
+    <span class="n">memset</span><span class="p">(</span><span class="n">dp</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">dp</span><span class="p">));</span>
+    <span class="n">mn</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">dp</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">p</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">p</span><span class="o">&lt;</span><span class="mi">2501</span><span class="p">;</span><span class="o">++</span><span class="n">p</span><span class="p">){</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="o">++</span><span class="n">i</span><span class="p">)</span>
+            <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="n">from</span> <span class="o">:</span> <span class="n">rev</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">p</span> <span class="o">-</span> <span class="n">w</span><span class="p">[</span><span class="n">from</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">dp</span><span class="p">[</span><span class="n">from</span><span class="p">][</span><span class="n">p</span> <span class="o">-</span> <span class="n">w</span><span class="p">[</span><span class="n">from</span><span class="p">][</span><span class="n">i</span><span class="p">]]</span><span class="o">!=-</span><span class="mi">1</span><span class="p">)</span>
+                    <span class="n">mmn</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">p</span><span class="p">],</span> <span class="n">dp</span><span class="p">[</span><span class="n">from</span><span class="p">][</span><span class="n">p</span> <span class="o">-</span> <span class="n">w</span><span class="p">[</span><span class="n">from</span><span class="p">][</span><span class="n">i</span><span class="p">]]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="n">p</span><span class="o">&gt;=</span><span class="n">z</span> <span class="o">&amp;&amp;</span> <span class="n">mn</span><span class="p">[</span><span class="n">p</span><span class="o">-</span><span class="n">z</span><span class="p">]</span><span class="o">!=-</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">mmn</span><span class="p">(</span><span class="n">mn</span><span class="p">[</span><span class="n">p</span><span class="p">],</span> <span class="n">mn</span><span class="p">[</span><span class="n">p</span><span class="o">-</span><span class="n">z</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="o">++</span><span class="n">i</span><span class="p">)</span>
+            <span class="k">if</span><span class="p">(</span><span class="o">~</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">p</span><span class="p">])</span> <span class="n">mmn</span><span class="p">(</span><span class="n">mn</span><span class="p">[</span><span class="n">p</span><span class="p">],</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">p</span><span class="p">]);</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="o">++</span><span class="n">i</span><span class="p">)</span>
+            <span class="k">if</span><span class="p">(</span><span class="o">~</span><span class="n">mn</span><span class="p">[</span><span class="n">p</span><span class="p">])</span> <span class="n">mmn</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">p</span><span class="p">],</span> <span class="n">mn</span><span class="p">[</span><span class="n">p</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">long</span> <span class="kt">long</span><span class="o">&gt;</span> <span class="n">answer</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="k">auto</span> <span class="n">q</span> <span class="o">:</span> <span class="n">queries</span><span class="p">){</span>
+        <span class="kt">long</span> <span class="kt">long</span> <span class="n">ans</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">q</span> <span class="o">&lt;</span> <span class="mi">2501</span><span class="p">)</span> <span class="n">ans</span> <span class="o">=</span> <span class="n">mn</span><span class="p">[</span><span class="n">q</span><span class="p">];</span>
+        <span class="k">else</span><span class="p">{</span>
+            <span class="kt">long</span> <span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2500</span><span class="p">;</span>
+            <span class="k">for</span><span class="p">(;</span><span class="o">~</span><span class="n">i</span><span class="p">;</span><span class="o">--</span><span class="n">i</span><span class="p">)</span> <span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">%</span><span class="n">z</span> <span class="o">==</span> <span class="n">q</span><span class="o">%</span><span class="n">z</span><span class="p">)</span> <span class="k">break</span><span class="p">;</span>
+            <span class="k">if</span><span class="p">(</span><span class="o">~</span><span class="n">mn</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="n">ans</span> <span class="o">=</span> <span class="p">(</span><span class="n">q</span><span class="o">-</span><span class="n">i</span><span class="p">)</span><span class="o">/</span><span class="n">z</span> <span class="o">+</span> <span class="n">mn</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="p">}</span>
+        <span class="n">answer</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">ans</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">answer</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<hr />
+
+<h3 id="참가후기">참가후기</h3>
+
+<p>전체 8등을 했다.</p>
+
+<p><img src="../assets/postimg/2021-04-28-programmers-monthly-code-challenge-s2-april/screenshot1.png" alt="" /></p>
+
+<p>지문이 간단하고 명확할 뿐만 아니라 무려 한국어로 나왔다. 지문을 잘못 해석할 여지가 없다보니 해석이 약한 나한테 유리했다. 국내에도 이렇게 좋은 대회가 생기다니 앞으로도 자주 참가해야겠다.</p>
+
+          </div>
+          <div class="article-share">
+            
+            
+            <a href="https://twitter.com/home?status=%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4+%EC%9B%94%EA%B0%84+%EC%BD%94%EB%93%9C+%EC%B1%8C%EB%25A...%20-%20https://gumgood.github.io/posts/programmers-monthly-code-challenge-s2-april" title="Share on Twitter" rel="noreferrer noopener" target="_blank">
+              <svg viewBox="0 0 512 512"><path d="M492 109.5c-17.4 7.7-36 12.9-55.6 15.3 20-12 35.4-31 42.6-53.6 -18.7 11.1-39.4 19.2-61.5 23.5C399.8 75.8 374.6 64 346.8 64c-53.5 0-96.8 43.4-96.8 96.9 0 7.6 0.8 15 2.5 22.1 -80.5-4-151.9-42.6-199.6-101.3 -8.3 14.3-13.1 31-13.1 48.7 0 33.6 17.2 63.3 43.2 80.7C67 210.7 52 206.3 39 199c0 0.4 0 0.8 0 1.2 0 47 33.4 86.1 77.7 95 -8.1 2.2-16.7 3.4-25.5 3.4 -6.2 0-12.3-0.6-18.2-1.8 12.3 38.5 48.1 66.5 90.5 67.3 -33.1 26-74.9 41.5-120.3 41.5 -7.8 0-15.5-0.5-23.1-1.4C62.8 432 113.7 448 168.3 448 346.6 448 444 300.3 444 172.2c0-4.2-0.1-8.4-0.3-12.5C462.6 146 479 129 492 109.5z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://gumgood.github.io/posts/programmers-monthly-code-challenge-s2-april" title="Share on Facebook" rel="noreferrer noopener" target="_blank">
+              <svg viewBox="0 0 512 512"><path d="M288 192v-38.1c0-17.2 3.8-25.9 30.5-25.9H352V64h-55.9c-68.5 0-91.1 31.4-91.1 85.3V192h-45v64h45v192h83V256h56.4l7.6-64H288z"/></svg>
+            </a>
+          </div>
+
+          
+            <div id="disqus_thread" class="article-comments"></div>
+            <script src="https://gumgood-blog.disqus.com/embed.js" async defer></script>
+            <noscript>Please enable JavaScript to view the comments.</noscript>
+          
+        </article>
+        <footer class="footer scrollappear">
+  <p>
+    Published by
+    <a href="/about" title="About me">gumgood</a>.
+  </p>
+</footer>
+
+      </div>
+    </div>
+  </main>
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2YZRWZP3K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-P2YZRWZP3K');
+  </script>
+
+
+<script src="/assets/vendor.js" type="text/javascript"></script>
+
+
+  <script src="/assets/webfonts.js" type="text/javascript"></script>
+
+
+
+  <script src="/assets/scrollappear.js" type="text/javascript"></script>
+
+
+<script src="/assets/application.js" type="text/javascript"></script>
+
+
+</body>
+</html>
